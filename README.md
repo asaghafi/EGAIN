@@ -50,9 +50,13 @@ egain_parameters = {'batch_size': 64, 'hint_rate': 0.90, 'alpha': 80, 'iteration
 imputed_data = EGAIN(data_x, egain_parameters, retrain=False, plots=True)
 ```
 
+## Best `alpha`
 It is best to set `plots=True` for the first run. A chart like the following will be generated, after the training iterations complete. On the right you have the $\mathcal{L}_G$ Loss that is only applied to imputed missing $(m_i=0)$ and penalizes G if D performs well by correctly outputting low chances. $\alpha \cdot \mathcal{L}_M$ Loss is only applied to observed values $(m_i=1)$ encouraging the generator to produce realistic values that deceive the discriminator.
 [<img src="sample.png">](sample.png)
 
 Change value of hyperparameter `alpha` so that the Generator Loss starts around the value of the Discriminator Loss, similar to the following chart where `alpha=100` is chosen. 
 [<img src="sample.png">](sample.png)
+
+## Best iterations
+Once proper value of `alpha` is selected, 
 
