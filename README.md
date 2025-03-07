@@ -12,7 +12,7 @@ To install EGAIN using pip:
 pip install EGAIN
 ```
 Alternatively, you can install EGAIN directly from this github page:
-```console
+```python
 ## Clone EGAIN 
 !git clone https://github.com/asaghafi/EGAIN.git
 
