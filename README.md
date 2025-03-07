@@ -21,7 +21,6 @@ Alternatively, you can install EGAIN directly from this github page:
 !pip install -r requirements.txt
 
 ## Import requirements
-##-------------------
 import sys
 import time
 import numpy as np
@@ -35,7 +34,6 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import root_mean_squared_error
 
 ## Import utility functions
-##-------------------
 sys.path.append('/content/EGAIN')
 from utils import *
 from EGAIN import EGAIN
