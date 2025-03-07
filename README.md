@@ -109,9 +109,9 @@ for run in range(1, 11):
   imputed_data = EGAIN(data_x, egain_parameters)
   egain_parameters = {'batch_size': 64, 'hint_rate': 0.90, 'alpha': 80, 'iterations': 1000}
   imputed_data = EGAIN(data_x, egain_parameters, retrain=True)
+  end_time = time.time()
 
   # Performance
-  end_time = time.time()
   egain_time.append(end_time - start_time)
   egain_rmse.append(rmse_loss(full_data, data_x, imputed_data))
 
