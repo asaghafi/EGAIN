@@ -38,6 +38,7 @@ def EGAIN (data_x, egain_parameters, retrain=False, plots=False):
   retrain: True/False, whether to retrain the generator or not
   plots: True/False, whether to plot the losses or not
   '''
+  print(THE CODES WILL BE RELEASED AFTER PUBLICATION OF THE PAPER)
   print(data_x)
   print(egain_parameters)
   imputed_data = (data_x)
