@@ -7,10 +7,10 @@ Missing values pose a challenge in predictive analysis specially in big data bec
 The EGAIN package uses `TensorFlow 2`. 
 
 # Install
-To install MissForest using pip, 
+To install EGAIN using pip, 
 
 ```console
-pip install MissForest
+pip install EGAIN
 ```
 Imputing a dataset:
 After installing the package, are ready to use EGAIN fucction to impute missing values in a dataset. The EGAIN function requires the following inputs: 
@@ -32,14 +32,14 @@ from sklearn.metrics import root_mean_squared_error
 
 ## Load data with missing values and store it as numpy ndarray
 ##-------------------
-data_x = pd.read_csv('/content/EGAIN/data/breast.csv').to_numpy(dtype=float)
+data_x = pd.read_csv('/content/EGAIN/data/example.csv').to_numpy(dtype=float)
 
 ## Set hyperparameters
 ##-------------------
 # batch_size: 64 (default)
 # hint_rate: 0.90 (default)
 # alpha: 80 (default), can be adjusted after a test run
-# iterations: 2000 (default)
+# iterations: 1000 (default)
 egain_parameters = {'batch_size': 64, 'hint_rate': 0.90, 'alpha': 80, 'iterations': 1000}
 
 ## Use EGAIN to impute missing values in data_x
@@ -49,3 +49,10 @@ egain_parameters = {'batch_size': 64, 'hint_rate': 0.90, 'alpha': 80, 'iteration
 # retrain: True/False: whether to use the weights from previous run to retrain
 imputed_data = EGAIN(data_x, egain_parameters, retrain=False, plots=True)
 ```
+
+It is best to set `plots=True` for the first run. A chart like the following will be generated, after the training iterations complete. On the right you have the $\mathcal{L}_G$ Loss that is only applied to imputed missing $(m_i=0)$ and penalizes G if D performs well by correctly outputting low chances. $\alpha \cdot \mathcal{L}_M$ Loss is only applied to observed values $(m_i=1)$ encouraging the generator to produce realistic values that deceive the discriminator.
+[<img src="sample.png">](sample.png)
+
+Change value of hyperparameter `alpha` so that the Generator Loss starts around the value of the Discriminator Loss, similar to the following chart where `alpha=100` is chosen. 
+[<img src="sample.png">](sample.png)
+
