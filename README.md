@@ -6,12 +6,42 @@ Missing values pose a challenge in predictive analysis specially in big data bec
 # Requirements
 The EGAIN package uses `TensorFlow 2`. 
 
-# Install
-To install EGAIN using pip, 
-
+# Installation
+To install EGAIN using pip:
 ```console
 pip install EGAIN
 ```
+Alternatively, you can install EGAIN directly from this github page:
+```console
+## Clone EGAIN 
+!git clone https://github.com/asaghafi/EGAIN.git
+
+## Install requirements
+%cd /content/EGAIN
+!pip install -r requirements.txt
+
+## Import requirements
+##-------------------
+import sys
+import time
+import numpy as np
+import pandas as pd
+import tensorflow as tf
+import matplotlib.pyplot as plt
+from tqdm import tqdm
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Dense, Input, Flatten, MaxPooling1D, Conv1D
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.metrics import root_mean_squared_error
+
+## Import utility functions
+##-------------------
+sys.path.append('/content/EGAIN')
+from utils import *
+from EGAIN import EGAIN
+```
+
+
 # Impute Missing
 The EGAIN function requires the following inputs: 
 
