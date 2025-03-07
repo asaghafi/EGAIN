@@ -58,5 +58,67 @@ Change value of hyperparameter `alpha` so that the Generator Loss starts around 
 [<img src="sample.png">](sample.png)
 
 ## Best iterations
-Once proper value of `alpha` is selected, 
+`iterations=1000` are enough for most datasets. After setting proper `alpha`, if the generator and discriminator loss in the charts still have a decreasing pattern, increase the number of iterations. If the losses terminate earlier than 1000 iterations, your choice of iteration is fine. In this case, it is best to set `retrain=True`, so that another training is launched using the best weights from last training. You can use the same parameters for the retraining. 
 
+## Best Batch Size
+Generally, select batch size so that (batch_size/total_cases) < 10% of total cases. Using 64 for small (under 1k cases), 64 and 128 for medium (between 1k and 5k), 128 and 256 for large (more than 5k cases) generates reliable results. 
+
+## Best Hint Rate
+There is no resaerch on the best value of hint rate. 90% is a default value. 
+
+# Simulations
+If you have a complete data without missing values and you are trying to assess performance of EGAIN, use the following codes to generate MCAR missing values from the complete data, impute the missing using EGAIN, assess performance of EGAIN using RMSE calculated only for the imputed values and their values from complete data.
+```python
+## Import requirements
+##-------------------
+import sys
+import time
+import numpy as np
+import pandas as pd
+import tensorflow as tf
+import matplotlib.pyplot as plt
+from tqdm import tqdm
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Dense, Input, Flatten, MaxPooling1D, Conv1D
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.metrics import root_mean_squared_error
+
+# Set seed for reproducibility
+np.random.seed(25)
+
+## Load complete data and store it as numpy ndarray
+##-------------------
+full_date = pd.read_csv('/content/EGAIN/data/example.csv').to_numpy(dtype=float)
+
+# Store results
+egain_time  = []
+egain_rmse = []
+
+# Perform 10 runs
+##--------------------
+for run in range(1, 11):
+  ## Generate missing
+  # ncols=0: randomly from all columns
+  # ncols=int: randomly from int columns that are selected randomly
+  data_x = mcar_missing(full_data, ncols=0, miss_rate=0.5, random_seed=25)
+
+  ## Impute Missing
+  tf.keras.backend.clear_session()
+  start_time = time.time()
+  egain_parameters = {'batch_size': 64, 'hint_rate': 0.90, 'alpha': 80, 'iterations': 1000}
+  imputed_data = EGAIN(data_x, egain_parameters)
+  egain_parameters = {'batch_size': 64, 'hint_rate': 0.90, 'alpha': 80, 'iterations': 1000}
+  imputed_data = EGAIN(data_x, egain_parameters, retrain=True)
+
+  # Performance
+  end_time = time.time()
+  egain_time.append(end_time - start_time)
+  egain_rmse.append(rmse_loss(full_data, data_x, imputed_data))
+
+#  DataFrame all results
+results = pd.DataFrame()
+results['time_'] = egain_time
+results['rmse_'] = egain_rmse
+results.to_csv('/content/results.csv')
+print(results)
+```
