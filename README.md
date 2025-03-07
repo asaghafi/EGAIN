@@ -4,7 +4,16 @@ Abolfazl Saghafi, Soodeh Moallemian, Miray Budak, and Rutvik Deshpande, EGAIN: E
 Missing values pose a challenge in predictive analysis specially in big data because most models depend on complete datasets to estimate functional relationships between variables. Generative Adversarial Imputation Networks are among the most reliable methods to impute missing values with plausible numbers from the dataset. This research introduces Enhanced Generative Adversarial Networks (EGAIN), which address the GAIN convergence issue, introduce new functionality to the GAIN process, and significantly improve its performance.
 
 # Requirements
-The EGAIN package uses `TensorFlow 2`. 
+These are main packages and their versions that make codes works error free.
+```console
+python>=3.11.11
+numpy>=1.26.4
+pandas>=2.2.2
+tensorflow>=2.18.0
+scikit-learn>=1.6.1
+matplotlib>=3.10.0
+tqdm>=4.67.1
+```
 
 # Installation
 To install EGAIN using pip:
