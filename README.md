@@ -12,8 +12,8 @@ To install EGAIN using pip,
 ```console
 pip install EGAIN
 ```
-Imputing a dataset:
-After installing the package, are ready to use EGAIN fucction to impute missing values in a dataset. The EGAIN function requires the following inputs: 
+# Impute Missing
+The EGAIN function requires the following inputs: 
 
 ```python
 ## Import requirements
@@ -44,8 +44,8 @@ egain_parameters = {'batch_size': 64, 'hint_rate': 0.90, 'alpha': 80, 'iteration
 
 ## Use EGAIN to impute missing values in data_x
 ##-------------------
-# Options: default is False
-# plots: True/False plots the generator, discriminator loss functions
+# Options: (default is False)
+# plots: True/False: whether to plot the generator, discriminator loss functions
 # retrain: True/False: whether to use the weights from previous run to retrain
 imputed_data = EGAIN(data_x, egain_parameters, retrain=False, plots=True)
 ```
