@@ -100,10 +100,10 @@ In the above chart, `alpha=10` is chosen. Change value of hyperparameter `alpha`
 `iterations=1000` are enough for most datasets. After setting proper `alpha`, if the generator and discriminator loss in the charts still have a decreasing pattern, increase the number of iterations. If the losses terminate earlier than 1000 iterations, similar to the two charts above, your choice of iteration is fine. In this case, it is best to train again, this time set `retrain=True`, so that the new training is launched using the best weights from last training. You can use the same parameters for the retraining. 
 
 ## Best Batch Size
-Generally, select batch size so that (batch_size/total_cases) < 10% of total cases. Using 64 for small (under 1k cases), 64 and 128 for medium (between 1k and 5k), 128 and 256 for large (more than 5k cases) generates reliable results. 
+Generally, select batch size so that (batch_size/total_cases) < 10% of total cases. Using 32/64 for small (under 1k cases), 64/128 for medium (between 1k and 5k), 128/256 for large (more than 5k cases) generates reliable results. Increasing the batch size increases the imputation runtime. 
 
 ## Best Hint Rate
-There is no resaerch on the best value of hint rate. 90% is a default value. 
+There is no resaerch on the best value of hint rate. 90% is used as a default value. 
 
 # Simulations
 If you have a complete data without missing values and you are trying to assess performance of EGAIN, use the following codes to generate MCAR missing values from the complete data, impute the missing using EGAIN, assess performance of EGAIN using RMSE calculated only for the imputed values and their values from complete data.
