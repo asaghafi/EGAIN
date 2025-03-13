@@ -41,6 +41,20 @@ from EGAIN import EGAIN
 After loading the data and storing it as numpy ndarray (float), set hyperparameters, then use EGAIN function to impute missing values:
 
 ```python
+## Import requirements
+##-------------------
+import sys
+import time
+import numpy as np
+import pandas as pd
+import tensorflow as tf
+import matplotlib.pyplot as plt
+from tqdm import tqdm
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Dense, Input, Flatten, MaxPooling1D, Conv1D
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.metrics import root_mean_squared_error
+
 ## Load data with missing values and store it as numpy ndarray
 ##-------------------
 data_x = pd.read_csv('/content/EGAIN/data/example.csv').to_numpy(dtype=float)
