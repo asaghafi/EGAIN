@@ -109,7 +109,7 @@ from tensorflow.keras.layers import Dense, Input, Flatten, MaxPooling1D, Conv1D
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import root_mean_squared_error
 from EGAIN import EGAIN
-from EGAIN import plot_losses, rounding, rmse_loss
+from EGAIN import plot_losses, rounding, rmse_loss, mcar_missing
 
 # Set seed for reproducibility
 np.random.seed(25)
