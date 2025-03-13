@@ -40,7 +40,7 @@ from EGAIN import EGAIN
 
 
 # Impute Missing
-After loading the data and storing it as numpy ndarray (float), setup hyperparameters, then use EGAIN function to impute missing values:
+After loading the data and storing it as numpy ndarray (float), set hyperparameters, then use EGAIN function to impute missing values:
 
 ```python
 ## Load data with missing values and store it as numpy ndarray
