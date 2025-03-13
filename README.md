@@ -19,6 +19,22 @@ tqdm>=4.67.1
 To install EGAIN using pip:
 ```console
 !pip install EGAIN
+
+## Import requirements
+##-------------------
+import sys
+import time
+import numpy as np
+import pandas as pd
+import tensorflow as tf
+import matplotlib.pyplot as plt
+from tqdm import tqdm
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Dense, Input, Flatten, MaxPooling1D, Conv1D
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.metrics import root_mean_squared_error
+from EGAIN import EGAIN
+from EGAIN import plot_losses, rounding, rmse_loss
 ```
 Alternatively, you can install EGAIN directly from this github page:
 ```python
@@ -41,22 +57,6 @@ from EGAIN import EGAIN
 After loading the data and storing it as numpy ndarray (float), set hyperparameters, then use EGAIN function to impute missing values:
 
 ```python
-## Import requirements (only if EGAIN is installed using pip, skip otherwise)
-##-------------------
-import sys
-import time
-import numpy as np
-import pandas as pd
-import tensorflow as tf
-import matplotlib.pyplot as plt
-from tqdm import tqdm
-from tensorflow.keras.models import Model
-from tensorflow.keras.layers import Dense, Input, Flatten, MaxPooling1D, Conv1D
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.metrics import root_mean_squared_error
-from EGAIN import EGAIN
-from EGAIN import plot_losses, rounding, rmse_loss
-
 ## Load data with missing values and store it as numpy ndarray
 ##-------------------
 data_x = pd.read_csv('/content/EGAIN/data/example.csv').to_numpy(dtype=float)
