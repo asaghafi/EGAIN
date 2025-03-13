@@ -56,7 +56,7 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import root_mean_squared_error
 
 from EGAIN import EGAIN  # only if EGAIN is installed using pip, comment otherwise
-from EGAIN import plot_losses, rounding # only if EGAIN is installed using pip, comment otherwise
+from EGAIN import plot_losses, rounding, rmse_loss # only if EGAIN is installed using pip, comment otherwise
 
 ## Load data with missing values and store it as numpy ndarray
 ##-------------------
