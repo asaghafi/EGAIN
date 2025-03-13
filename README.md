@@ -93,7 +93,7 @@ Generally, select batch size so that (batch_size/total_cases) < 10% of total cas
 There is no resaerch on the best value of hint rate. 90% is used as a default value. 
 
 # Simulations
-If you have a complete data without missing values and you are trying to assess performance of EGAIN, use the following codes to generate MCAR missing values from the complete data, impute the missing using EGAIN, assess performance of EGAIN using RMSE calculated only for the imputed values and their values from complete data.
+If you have a complete data without missing values and you are trying to assess performance of EGAIN, use the following codes to generate MCAR missing values from the complete data, impute the missing using EGAIN, assess performance of EGAIN using RMSE calculated only between the imputed values and their original values.
 ```python
 ## Import requirements
 ##-------------------
