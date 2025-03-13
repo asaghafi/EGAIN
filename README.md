@@ -41,7 +41,7 @@ from EGAIN import EGAIN
 After loading the data and storing it as numpy ndarray (float), set hyperparameters, then use EGAIN function to impute missing values:
 
 ```python
-## Import requirements
+## Import requirements (only if EGAIN is installed using pip, skip otherwise)
 ##-------------------
 import sys
 import time
@@ -54,9 +54,8 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Dense, Input, Flatten, MaxPooling1D, Conv1D
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import root_mean_squared_error
-
-from EGAIN import EGAIN  # only if EGAIN is installed using pip, comment otherwise
-from EGAIN import plot_losses, rounding, rmse_loss # only if EGAIN is installed using pip, comment otherwise
+from EGAIN import EGAIN
+from EGAIN import plot_losses, rounding, rmse_loss
 
 ## Load data with missing values and store it as numpy ndarray
 ##-------------------
@@ -110,6 +109,8 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Dense, Input, Flatten, MaxPooling1D, Conv1D
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import root_mean_squared_error
+from EGAIN import EGAIN
+from EGAIN import plot_losses, rounding, rmse_loss
 
 # Set seed for reproducibility
 np.random.seed(25)
