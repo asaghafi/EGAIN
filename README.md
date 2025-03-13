@@ -31,7 +31,7 @@ from tensorflow.keras.layers import Dense, Input, Flatten, MaxPooling1D, Conv1D
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import root_mean_squared_error
 from EGAIN import EGAIN
-from EGAIN import plot_losses, rounding, rmse_loss
+from EGAIN import plot_losses, rounding, rmse_loss, mcar_missing
 ```
 Alternatively, you can install EGAIN directly from this github page. This option works great if you are using google collaboratory. 
 ```python
@@ -93,22 +93,6 @@ There is no resaerch on the best value of hint rate. 90% is used as a default va
 # Simulations
 If you have a complete data without missing values and you are trying to assess performance of EGAIN, use the following codes to generate MCAR missing values from the complete data, impute the missing using EGAIN, assess performance of EGAIN using RMSE calculated only between the imputed values and their original values.
 ```python
-## Import requirements
-##-------------------
-import sys
-import time
-import numpy as np
-import pandas as pd
-import tensorflow as tf
-import matplotlib.pyplot as plt
-from tqdm import tqdm
-from tensorflow.keras.models import Model
-from tensorflow.keras.layers import Dense, Input, Flatten, MaxPooling1D, Conv1D
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.metrics import root_mean_squared_error
-from EGAIN import EGAIN
-from EGAIN import plot_losses, rounding, rmse_loss, mcar_missing
-
 # Set seed for reproducibility
 np.random.seed(25)
 
