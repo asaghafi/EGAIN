@@ -4,7 +4,7 @@ Abolfazl Saghafi, Soodeh Moallemian, Miray Budak, and Rutvik Deshpande, EGAIN: E
 <code style="color : red">Note: the main EGAIN codes are not shared yet as we are waiting for the reveiw process to conclude.</code>
 
 # Requirements
-These are main packages and their versions that make codes works error free.
+Main required packages and their versions:
 ```console
 python>=3.11.11
 numpy>=1.26.4
