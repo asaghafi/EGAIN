@@ -18,7 +18,7 @@ tqdm>=4.67.1
 # Installation
 To install EGAIN using pip:
 ```console
-pip install EGAIN
+!pip install EGAIN
 ```
 Alternatively, you can install EGAIN directly from this github page:
 ```python
