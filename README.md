@@ -31,20 +31,8 @@ Alternatively, you can install EGAIN directly from this github page:
 %cd /content/EGAIN
 !pip install -r requirements.txt
 
-## Import requirements
-import sys
-import time
-import numpy as np
-import pandas as pd
-import tensorflow as tf
-import matplotlib.pyplot as plt
-from tqdm import tqdm
-from tensorflow.keras.models import Model
-from tensorflow.keras.layers import Dense, Input, Flatten, MaxPooling1D, Conv1D
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.metrics import root_mean_squared_error
-
 ## Import utility functions
+import sys
 sys.path.append('/content/EGAIN')
 from utils import *
 from EGAIN import EGAIN
@@ -55,20 +43,6 @@ from EGAIN import EGAIN
 The EGAIN function requires the following inputs: 
 
 ```python
-## Import requirements
-##-------------------
-import sys
-import time
-import numpy as np
-import pandas as pd
-import tensorflow as tf
-import matplotlib.pyplot as plt
-from tqdm import tqdm
-from tensorflow.keras.models import Model
-from tensorflow.keras.layers import Dense, Input, Flatten, MaxPooling1D, Conv1D
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.metrics import root_mean_squared_error
-
 ## Load data with missing values and store it as numpy ndarray
 ##-------------------
 data_x = pd.read_csv('/content/EGAIN/data/example.csv').to_numpy(dtype=float)
