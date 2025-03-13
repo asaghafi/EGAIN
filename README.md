@@ -55,6 +55,9 @@ from tensorflow.keras.layers import Dense, Input, Flatten, MaxPooling1D, Conv1D
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import root_mean_squared_error
 
+from EGAIN import EGAIN  # only if EGAIN is installed using pip, comment otherwise
+from EGAIN import plot_losses, rounding # only if EGAIN is installed using pip, comment otherwise
+
 ## Load data with missing values and store it as numpy ndarray
 ##-------------------
 data_x = pd.read_csv('/content/EGAIN/data/example.csv').to_numpy(dtype=float)
