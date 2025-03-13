@@ -4,14 +4,14 @@ Abolfazl Saghafi, Soodeh Moallemian, Miray Budak, and Rutvik Deshpande, EGAIN: E
 <code style="color : red">Note: the main EGAIN codes are not shared yet as we are waiting for the reveiw process to conclude.</code>
 
 # Requirements
-The codes require `python>=3.11`. Main required packages and their versions are:
+The codes require `python>=3.11`. Main required libraries and their versions are:
 ```console
-numpy>=1.26.4
-pandas>=2.2.2
-tensorflow>=2.18.0
-scikit-learn>=1.6.1
-matplotlib>=3.10.0
-tqdm>=4.67.1
+numpy >= 1.26.4
+pandas >= 2.2.2
+tensorflow >= 2.18.0
+scikit-learn >= 1.6.1
+matplotlib >= 3.10.0
+tqdm >= 4.67.1
 ```
 
 # Installation
