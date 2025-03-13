@@ -4,7 +4,7 @@ Abolfazl Saghafi, Soodeh Moallemian, Miray Budak, and Rutvik Deshpande, EGAIN: E
 <code style="color : red">Note: the main EGAIN codes are not shared yet as we are waiting for the reveiw process to conclude.</code>
 
 # Requirements
-The codes require `python>=3.11`. Main required libraries and their versions are:
+The codes require `python >= 3.11`. Main required libraries and their versions are:
 ```console
 numpy >= 1.26.4
 pandas >= 2.2.2
