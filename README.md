@@ -21,8 +21,6 @@ First install the above requirements with their versions using `pip`, then insta
 
 ## Import requirements
 ##-------------------
-import sys
-import time
 import numpy as np
 import pandas as pd
 import tensorflow as tf
