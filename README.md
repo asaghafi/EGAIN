@@ -4,9 +4,8 @@ Abolfazl Saghafi, Soodeh Moallemian, Miray Budak, and Rutvik Deshpande, EGAIN: E
 <code style="color : red">Note: the main EGAIN codes are not shared yet as we are waiting for the reveiw process to conclude.</code>
 
 # Requirements
-Main required packages and their versions:
+The codes require `python>=3.11`. Main required packages and their versions are:
 ```console
-python>=3.11.11
 numpy>=1.26.4
 pandas>=2.2.2
 tensorflow>=2.18.0
@@ -16,7 +15,7 @@ tqdm>=4.67.1
 ```
 
 # Installation
-To install EGAIN using pip, first install the above requirements with their versions, then:
+First install the above requirements with their versions using `pip`, then instal EGAIN using `pip`, and load required libraries:
 ```console
 !pip install EGAIN
 
@@ -36,7 +35,7 @@ from sklearn.metrics import root_mean_squared_error
 from EGAIN import EGAIN
 from EGAIN import plot_losses, rounding, rmse_loss
 ```
-Alternatively, you can install EGAIN directly from this github page:
+Alternatively, you can install EGAIN directly from this github page. This option works great if you are using google collaboratory. 
 ```python
 ## Clone EGAIN 
 !git clone https://github.com/asaghafi/EGAIN.git
@@ -54,7 +53,7 @@ from EGAIN import EGAIN
 
 
 # Impute Missing
-After loading the data and storing it as numpy ndarray (float), set hyperparameters, then use EGAIN function to impute missing values:
+After loading the data with missing values and storing it as numpy ndarray (float), set hyperparameters, then use EGAIN function to impute missing values:
 
 ```python
 ## Load data with missing values and store it as numpy ndarray
