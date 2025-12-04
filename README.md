@@ -32,7 +32,7 @@ from sklearn.metrics import root_mean_squared_error
 from EGAIN import EGAIN
 from EGAIN import plot_losses, rounding, rmse_loss, mcar_missing
 ```
-Alternatively, you can install EGAIN directly from this github page. This option works great if you are using google collaboratory. 
+Alternatively, you can install EGAIN directly from this github page. This option works great if you are using google collaboratory: 
 ```python
 ## Clone EGAIN 
 !git clone https://github.com/asaghafi/EGAIN.git
