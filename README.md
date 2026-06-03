@@ -1,5 +1,5 @@
 # EGAIN
-Abolfazl Saghafi, Soodeh Moallemian, Miray Budak, and Rutvik Deshpande, EGAIN: Enhanced Generative Adversarial Networks for Imputing Missing Values, _Computers Materials & Continua (CMC)_, 2026. [DOI: 10.32604/cmc.2026.082996](https://doi.org/10.32604/cmc.2026.082996)
+Abolfazl Saghafi, Soodeh Moallemian, Miray Budak, and Rutvik Deshpande, EGAIN: Enhanced Generative Adversarial Networks for Imputing Missing Values, _Computers, Materials & Continua (CMC)_, 2026. [DOI: 10.32604/cmc.2026.082996](https://doi.org/10.32604/cmc.2026.082996)
 
 # Requirements
 The codes require `python >= 3.11`. Main required libraries and their versions are:
