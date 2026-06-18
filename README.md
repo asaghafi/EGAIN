@@ -97,7 +97,7 @@ np.random.seed(25)
 
 ## Load complete data and store it as numpy ndarray
 ##-------------------
-full_date = pd.read_csv('/content/EGAIN/data/example.csv').to_numpy(dtype=float)
+full_data = pd.read_csv('/content/EGAIN/data/example.csv').to_numpy(dtype=float)
 
 # Store results
 egain_time  = []
