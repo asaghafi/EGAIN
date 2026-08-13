@@ -13,7 +13,7 @@ tqdm >= 4.67.1
 ```
 
 # Installation
-First install the above requirements with their versions using `pip`, then instal EGAIN using `pip`, and load required libraries:
+First install the above requirements with their versions using `pip`, then install EGAIN using `pip`, and load required libraries:
 ```console
 !pip install EGAIN
 
